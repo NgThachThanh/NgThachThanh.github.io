@@ -68,7 +68,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .page {
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(200px, 250px) minmax(0, 1fr) minmax(230px, 280px);
+  grid-template-columns: minmax(220px, 290px) minmax(0, 1fr) minmax(230px, 280px);
   gap: clamp(1.5rem, 3.5vw, 3.5rem);
   max-width: 1440px;
   width: 100%;
@@ -88,7 +88,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 /* Left: identity */
 .col-left h1 {
-  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-size: clamp(1.3rem, 2.4vw, 1.5rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
 }
@@ -227,4 +227,8 @@ html[data-theme="dark"] .icon-moon { display: block; }
   }
 
   body { min-height: auto; }
+}
+
+@media (min-width: 961px) {
+  .col-left h1 { white-space: nowrap; }
 }
