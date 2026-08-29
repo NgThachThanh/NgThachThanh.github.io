@@ -157,7 +157,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .awards-list { list-style: none; display: grid; gap: 0.5rem; }
 
 /* Publications */
-#publications .card { padding: 0.7rem 0; }
+#publications .card { padding: 0.6rem 0; }
 #publications .card:last-child { padding-bottom: 0; }
 #publications .card > .card-meta { display: block; margin-bottom: 0.15rem; }
 
@@ -185,7 +185,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .award-place { color: var(--text-soft); font-size: 0.85rem; }
 
 /* Right: background */
-.col-right section + section { margin-top: 2rem; }
+main section + section { margin-top: 1.5rem; }
 
 .timeline-period {
   color: var(--text-soft);
