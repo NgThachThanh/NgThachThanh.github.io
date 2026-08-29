@@ -87,7 +87,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .hero {
   max-width: 44rem;
   margin: 0 auto;
-  padding: clamp(6rem, 18vh, 11rem) clamp(1.25rem, 5vw, 2rem) 5rem;
+  padding: clamp(3.5rem, 8vh, 5.5rem) clamp(1.25rem, 5vw, 2rem) 2.5rem;
 }
 
 .hero-greeting {
@@ -110,9 +110,9 @@ html[data-theme="dark"] .icon-moon { display: block; }
   font-weight: 400;
 }
 
-.hero-tagline { max-width: 32rem; margin-top: 1.25rem; color: var(--text-soft); }
+.hero-tagline { max-width: 32rem; margin-top: 0.75rem; color: var(--text-soft); }
 
-.hero-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2.5rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
 
 /* Buttons */
 .btn {
@@ -137,7 +137,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .section {
   max-width: 44rem;
   margin: 0 auto;
-  padding: 4.5rem clamp(1.25rem, 5vw, 2rem);
+  padding: 2.75rem clamp(1.25rem, 5vw, 2rem);
   scroll-margin-top: 4.5rem;
 }
 
@@ -147,7 +147,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--text-soft);
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .about-body p { margin-bottom: 1rem; }
@@ -159,7 +159,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
   display: grid;
   grid-template-columns: 10rem 1fr;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 0.7rem 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -171,10 +171,10 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .skill-row p { color: var(--text-soft); font-size: 0.9rem; }
 
 /* Projects */
-.cards { display: grid; gap: 2.5rem; }
+.cards { display: grid; gap: 1.5rem; }
 
 .card {
-  padding-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -197,7 +197,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 }
 
 /* Education */
-.timeline { display: grid; gap: 2rem; }
+.timeline { display: grid; gap: 1.25rem; }
 
 .timeline-period {
   color: var(--text-soft);
@@ -210,7 +210,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .timeline-place { color: var(--text-soft); font-size: 0.9rem; }
 
 /* Contact */
-.contact { text-align: center; padding-bottom: 6rem; }
+.contact { text-align: center; padding-bottom: 2.5rem; }
 
 .contact p { max-width: 28rem; margin: 0 auto 2rem; color: var(--text-soft); }
 
@@ -225,7 +225,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 .email-link:hover { border-color: var(--text); }
 
-.socials { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
+.socials { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1.5rem; }
 
 .socials a {
   color: var(--text-soft);
