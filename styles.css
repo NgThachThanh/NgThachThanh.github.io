@@ -130,12 +130,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .about-text { color: var(--text-soft); font-size: 0.88rem; }
 
 /* Center: achievements */
-.col-center .card { padding: 0.6rem 0; }
-
-.card { border-bottom: 1px solid var(--border); }
-
-.card:first-child { padding-top: 0; }
-.card:last-child { border-bottom: none; padding-bottom: 0.5rem; }
+.cards { display: grid; gap: 0.6rem; }
 
 .card-head {
   display: flex;
@@ -159,8 +154,6 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .awards-list { list-style: none; display: grid; gap: 0.5rem; }
 
 /* Publications */
-#publications .card { padding: 0.6rem 0; }
-#publications .card:last-child { padding-bottom: 0; }
 #publications .card > .card-meta { display: block; margin-bottom: 0.15rem; }
 
 .pub-title {
@@ -187,7 +180,11 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .award-place { color: var(--text-soft); font-size: 0.85rem; }
 
 /* Right: background */
-main section + section { margin-top: 1.5rem; }
+main section + section {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
 
 .timeline-period {
   color: var(--text-soft);
@@ -199,12 +196,7 @@ main section + section { margin-top: 1.5rem; }
 
 .timeline-place { color: var(--text-soft); font-size: 0.85rem; }
 
-.skill-rows { display: grid; }
-
-.skill-row { padding: 0.55rem 0; border-bottom: 1px solid var(--border); }
-
-.skill-row:first-child { padding-top: 0; }
-.skill-row:last-child { border-bottom: none; padding-bottom: 0; }
+.skill-rows { display: grid; gap: 0.55rem; }
 
 .skill-row h3 { font-size: 0.85rem; font-weight: 600; }
 
