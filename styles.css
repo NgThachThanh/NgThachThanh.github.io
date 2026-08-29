@@ -22,7 +22,7 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.55;
+  line-height: 1.45;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   display: flex;
@@ -70,10 +70,10 @@ html[data-theme="dark"] .icon-moon { display: block; }
   display: grid;
   grid-template-columns: minmax(200px, 250px) minmax(0, 1fr) minmax(230px, 280px);
   gap: clamp(1.5rem, 3.5vw, 3.5rem);
-  max-width: 1200px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: clamp(2rem, 5vh, 3.5rem) clamp(1.25rem, 4vw, 3rem);
+  padding: clamp(1.25rem, 3vh, 2rem) clamp(1.25rem, 4vw, 3rem);
   align-content: start;
 }
 
@@ -83,7 +83,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--text-soft);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.55rem;
 }
 
 /* Left: identity */
@@ -121,7 +121,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .about-text { color: var(--text-soft); font-size: 0.88rem; }
 
 /* Center: achievements */
-.col-center .card { padding: 0.9rem 0; }
+.col-center .card { padding: 0.6rem 0; }
 
 .card { border-bottom: 1px solid var(--border); }
 
@@ -142,7 +142,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 .card-points { margin: 0.35rem 0 0.55rem; padding-left: 1.05rem; }
 
-.card-points li { color: var(--text-soft); font-size: 0.9rem; margin-bottom: 0.25rem; }
+.card-points li { color: var(--text-soft); font-size: 0.86rem; margin-bottom: 0.15rem; }
 
 .card-points li::marker { color: var(--border); }
 
@@ -154,7 +154,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 }
 
 /* Awards */
-.awards-list { list-style: none; display: grid; gap: 0.7rem; }
+.awards-list { list-style: none; display: grid; gap: 0.5rem; }
 
 .awards-list li { display: grid; gap: 0.05rem; }
 
@@ -213,7 +213,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .footer {
   display: flex;
   justify-content: center;
-  padding: 1.25rem 1rem;
+  padding: 0.75rem 1rem;
   color: var(--text-soft);
   font-size: 0.78rem;
 }
