@@ -78,6 +78,9 @@ html[data-theme="dark"] .icon-moon { display: block; }
 }
 
 .section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -85,6 +88,8 @@ html[data-theme="dark"] .icon-moon { display: block; }
   color: var(--text-soft);
   margin-bottom: 0.55rem;
 }
+
+.section-title svg { width: 14px; height: 14px; flex-shrink: 0; }
 
 /* Left: identity */
 .col-left h1 {
@@ -102,6 +107,10 @@ html[data-theme="dark"] .icon-moon { display: block; }
   color: var(--text-soft);
   font-size: 0.85rem;
 }
+
+.cv-contact a, .cv-contact > span { display: flex; align-items: center; gap: 0.45rem; }
+
+.cv-contact svg { width: 15px; height: 15px; flex-shrink: 0; }
 
 .cv-contact a { color: var(--text-soft); text-decoration: none; overflow-wrap: anywhere; }
 .cv-contact a:hover { color: var(--text); }
