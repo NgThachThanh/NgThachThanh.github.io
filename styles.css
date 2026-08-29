@@ -146,13 +146,6 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 .card-points li::marker { color: var(--border); }
 
-.tech {
-  font-size: 0.8rem;
-  color: var(--text-soft);
-  font-family: ui-monospace, "SF Mono", Menlo, monospace;
-  margin-bottom: 0.5rem;
-}
-
 /* Awards */
 .awards-list { list-style: none; display: grid; gap: 0.5rem; }
 
