@@ -13,133 +13,118 @@
   </script>
 </head>
 <body>
-  <header class="nav">
-    <a class="logo" href="#hero">TT<span class="accent">.</span></a>
-    <nav class="nav-links" id="nav-links">
-      <a href="#about" data-i18n="nav.about">About</a>
-      <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#skills" data-i18n="nav.skills">Skills</a>
-      <a href="#education" data-i18n="nav.education">Education</a>
-    </nav>
-    <div class="nav-actions">
-      <button class="icon-btn" id="lang-btn" type="button" aria-label="Switch language">VI</button>
-      <button class="icon-btn" id="theme-btn" type="button" aria-label="Toggle theme">
-        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
-      </button>
-      <button class="icon-btn hamburger" id="menu-btn" type="button" aria-label="Menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </header>
+  <div class="float-actions">
+    <button class="icon-btn" id="lang-btn" type="button" aria-label="Switch language">VI</button>
+    <button class="icon-btn" id="theme-btn" type="button" aria-label="Toggle theme">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    </button>
+  </div>
 
-  <main>
-    <section id="hero" class="cv-header">
+  <main class="page">
+    <div class="col-left">
       <h1>Nguyen Thach Thanh</h1>
       <p class="cv-role" data-i18n="hero.role">Embedded Systems &amp; IoT Engineering</p>
       <div class="cv-contact">
         <a href="mailto:ngthachthanh@gmail.com">ngthachthanh@gmail.com</a>
-        <span aria-hidden="true">·</span>
         <a href="https://github.com/NgThachThanh" target="_blank" rel="noopener">github.com/NgThachThanh</a>
-        <span aria-hidden="true">·</span>
         <span data-i18n="hero.location">Ho Chi Minh City, Vietnam</span>
       </div>
       <span class="cv-soon" data-i18n="hero.cv">Download CV — coming soon</span>
-    </section>
-
-    <section id="about" class="section">
       <h2 class="section-title" data-i18n="about.title">About</h2>
-      <div class="about-body">
-        <p data-i18n="about.p1">I'm a final-year IT student at HUFLIT, majoring in Microelectronics Engineering. I like the layer where hardware meets software: designing PCBs in KiCad, writing firmware for STM32 and ESP32, and measuring what every milliamp costs in a duty-cycled sensor node.</p>
-        <p data-i18n="about.p2">Competitions and research have taken me further than the classroom: my thesis compares buck and LDO regulators on a real workload, my IoT greenhouse placed Top 12 at Sang Tao Xanh 2025, and my smart helmet reached Top 20 at BK Innovation. I'm open to internships and junior roles in embedded systems — feel free to reach out.</p>
-      </div>
-    </section>
+      <p class="about-text" data-i18n="about.p1">Final-year IT student at HUFLIT, majoring in Microelectronics Engineering. I like the layer where hardware meets software — PCBs in KiCad, firmware for STM32 and ESP32, and low-power measurement. Open to internships and junior roles in embedded systems.</p>
+    </div>
 
-    <section id="projects" class="section">
-      <h2 class="section-title" data-i18n="projects.title">Projects</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="card-head">
-            <h3 data-i18n="projects.p1.title">Buck vs LDO Energy Comparison</h3>
-            <span class="card-meta" data-i18n="projects.p1.tag">Undergraduate thesis project</span>
-          </div>
-          <ul class="card-points">
-            <li data-i18n="projects.p1.b1">Compared a TPS62840 buck vs STLQ020 LDO powering the same workload: an STM32L432 + BME280 node on a 5 s duty cycle (race-to-sleep).</li>
-            <li data-i18n="projects.p1.b2">Designed the 4-layer PCB in KiCad; measured input-side energy with an INA228 across supply voltages from 3.3 V to 4.2 V.</li>
-            <li data-i18n="projects.p1.b3">286 verified measurement runs on the real workload.</li>
-          </ul>
-          <p class="tech">KiCad · STM32 · C · Python</p>
-        </article>
-        <article class="card">
-          <div class="card-head">
-            <h3 data-i18n="projects.p2.title">GreenEco — Smart Greenhouse</h3>
-            <span class="card-meta" data-i18n="projects.p2.award">Top 12 — Green Innovation Contest (Sang Tao Xanh), HUST 2025</span>
-          </div>
-          <ul class="card-points">
-            <li data-i18n="projects.p2.b1">IoT greenhouse on Raspberry Pi: AI plant-disease detection (teammates) and remote control of lights, pump and fans via an app.</li>
-            <li data-i18n="projects.p2.b2">My part: sensor wiring and reading, sending signals to the server, and the relay control API.</li>
-          </ul>
-          <p class="tech">Raspberry Pi · Python · GPIO · UART / I2C</p>
-          <a class="btn small" href="https://github.com/NgThachThanh/greeneco" target="_blank" rel="noopener">GitHub</a>
-        </article>
-        <article class="card">
-          <div class="card-head">
-            <h3 data-i18n="projects.p3.title">Smart Helmet</h3>
-            <span class="card-meta" data-i18n="projects.p3.award">Top 20 — BK Innovation, HCMUT</span>
-          </div>
-          <ul class="card-points">
-            <li data-i18n="projects.p3.b1">ESP32-S3 with RTOS firmware: MPU6050 fall detection with automatic SMS alerts, plus a HUD for directions.</li>
-            <li data-i18n="projects.p3.b2">I built the sensor and firmware parts; the AI drowsiness feature belonged to teammates.</li>
-          </ul>
-          <p class="tech">ESP32-S3 · RTOS · MPU6050 · C/C++</p>
-        </article>
-      </div>
-    </section>
+    <div class="col-center">
+      <section id="projects">
+        <h2 class="section-title" data-i18n="projects.title">Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-head">
+              <h3 data-i18n="projects.p1.title">Buck vs LDO Energy Comparison</h3>
+              <span class="card-meta" data-i18n="projects.p1.tag">Undergraduate thesis project</span>
+            </div>
+            <ul class="card-points">
+              <li data-i18n="projects.p1.b1">Compared a TPS62840 buck vs STLQ020 LDO powering the same workload: an STM32L432 + BME280 node on a 5 s duty cycle (race-to-sleep).</li>
+              <li data-i18n="projects.p1.b2">Designed the 4-layer PCB in KiCad; measured input-side energy with an INA228 across supply voltages from 3.3 V to 4.2 V, 286 verified runs.</li>
+            </ul>
+            <p class="tech">KiCad · STM32 · C · Python</p>
+          </article>
+          <article class="card">
+            <div class="card-head">
+              <h3 data-i18n="projects.p2.title">GreenEco — Smart Greenhouse</h3>
+              <span class="card-meta" data-i18n="projects.p2.award">Top 12 — Green Innovation Contest (Sang Tao Xanh), HUST 2025</span>
+            </div>
+            <ul class="card-points">
+              <li data-i18n="projects.p2.b1">IoT greenhouse on Raspberry Pi: AI plant-disease detection (teammates) and remote control of lights, pump and fans via an app.</li>
+              <li data-i18n="projects.p2.b2">My part: sensor wiring and reading, sending signals to the server, and the relay control API.</li>
+            </ul>
+            <p class="tech">Raspberry Pi · Python · GPIO · UART / I2C</p>
+            <a class="btn small" href="https://github.com/NgThachThanh/greeneco" target="_blank" rel="noopener">GitHub</a>
+          </article>
+          <article class="card">
+            <div class="card-head">
+              <h3 data-i18n="projects.p3.title">Smart Helmet</h3>
+              <span class="card-meta" data-i18n="projects.p3.award">Top 20 — BK Innovation, HCMUT</span>
+            </div>
+            <ul class="card-points">
+              <li data-i18n="projects.p3.b1">ESP32-S3 with RTOS firmware: MPU6050 fall detection with automatic SMS alerts, plus a HUD for directions.</li>
+              <li data-i18n="projects.p3.b2">I built the sensor and firmware parts; the AI drowsiness feature belonged to teammates.</li>
+            </ul>
+            <p class="tech">ESP32-S3 · RTOS · MPU6050 · C/C++</p>
+          </article>
+        </div>
+        <!-- Publications: thêm block tương tự Projects tại đây khi có bài báo -->
+      </section>
+      <section id="awards">
+        <h2 class="section-title" data-i18n="awards.title">Awards</h2>
+        <ul class="awards-list">
+          <li>
+            <span class="award-year">2025</span>
+            <span class="award-name" data-i18n="edu.award1.title">Top 12 — Green Innovation Contest (Sang Tao Xanh), HUST</span>
+            <span class="award-place" data-i18n="edu.award1.place">GreenEco project</span>
+          </li>
+          <li>
+            <span class="award-year">&mdash;</span>
+            <span class="award-name" data-i18n="edu.award2.title">Top 20 — BK Innovation, HCMUT</span>
+            <span class="award-place" data-i18n="edu.award2.place">Smart Helmet project</span>
+          </li>
+        </ul>
+      </section>
+    </div>
 
-    <section id="skills" class="section">
-      <h2 class="section-title" data-i18n="skills.title">Skills</h2>
-      <div class="skill-rows">
-        <div class="skill-row">
-          <h3 data-i18n="skills.embedded">Embedded</h3>
-          <p>STM32 bare-metal C · ESP32-S3 + RTOS · Low-power duty cycling · I2C/UART</p>
+    <div class="col-right">
+      <section id="education">
+        <h2 class="section-title" data-i18n="edu.title">Education</h2>
+        <span class="timeline-period">2023 — 2027</span>
+        <p class="edu-school" data-i18n="edu.school.name">HUFLIT — B.Sc. in IT, Microelectronics Engineering</p>
+        <p class="timeline-place" data-i18n="edu.school.year">Final year</p>
+      </section>
+      <section id="skills">
+        <h2 class="section-title" data-i18n="skills.title">Skills</h2>
+        <div class="skill-rows">
+          <div class="skill-row">
+            <h3 data-i18n="skills.embedded">Embedded</h3>
+            <p>STM32 bare-metal C · ESP32-S3 + RTOS · Low-power duty cycling · I2C/UART</p>
+          </div>
+          <div class="skill-row">
+            <h3 data-i18n="skills.pcb">PCB &amp; Hardware</h3>
+            <p>KiCad (4-layer) · BME280 · MPU6050 · INA228 · Raspberry Pi</p>
+          </div>
+          <div class="skill-row">
+            <h3 data-i18n="skills.tools">Software &amp; Tools</h3>
+            <p>Python · C · Git · Linux (WSL)</p>
+          </div>
         </div>
-        <div class="skill-row">
-          <h3 data-i18n="skills.pcb">PCB &amp; Hardware</h3>
-          <p>KiCad (4-layer) · BME280 · MPU6050 · INA228 · Raspberry Pi</p>
-        </div>
-        <div class="skill-row">
-          <h3 data-i18n="skills.tools">Software &amp; Tools</h3>
-          <p>Python · C · Git · Linux (WSL)</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="section">
-      <h2 class="section-title" data-i18n="edu.title">Education &amp; Awards</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="timeline-period">2023 — 2027</span>
-          <h3 data-i18n="edu.school.name">HUFLIT — B.Sc. in IT, Microelectronics Engineering</h3>
-          <p class="timeline-place" data-i18n="edu.school.year">Final year</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-period">2025</span>
-          <h3 data-i18n="edu.award1.title">Top 12 — Green Innovation Contest (Sang Tao Xanh), HUST</h3>
-          <p class="timeline-place" data-i18n="edu.award1.place">GreenEco project</p>
-        </div>
-        <div class="timeline-item">
-          <h3 data-i18n="edu.award2.title">Top 20 — BK Innovation, HCMUT</h3>
-          <p class="timeline-place" data-i18n="edu.award2.place">Smart Helmet project</p>
-        </div>
-      </div>
-    </section>
+      </section>
+      <section id="languages">
+        <h2 class="section-title" data-i18n="lang.title">Languages</h2>
+        <p class="lang-list" data-i18n="lang.list">Vietnamese (native) · English</p>
+      </section>
+    </div>
   </main>
 
   <footer class="footer">
-    <a href="mailto:ngthachthanh@gmail.com">ngthachthanh@gmail.com</a>
-    <span aria-hidden="true">·</span>
-    <a href="https://github.com/NgThachThanh" target="_blank" rel="noopener">GitHub</a>
-    <span aria-hidden="true">·</span>
     <span>© 2026 Nguyen Thach Thanh</span>
   </footer>
 

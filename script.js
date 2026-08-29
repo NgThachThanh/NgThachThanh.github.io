@@ -1,22 +1,16 @@
 const I18N = {
   en: {
     "title": "Nguyen Thach Thanh — Embedded Systems & IoT",
-    "nav.about": "About",
-    "nav.skills": "Skills",
-    "nav.projects": "Projects",
-    "nav.education": "Education",
     "hero.role": "Embedded Systems & IoT Engineering",
     "hero.location": "Ho Chi Minh City, Vietnam",
     "hero.cv": "Download CV — coming soon",
     "about.title": "About",
-    "about.p1": "I'm a final-year IT student at HUFLIT, majoring in Microelectronics Engineering. I like the layer where hardware meets software: designing PCBs in KiCad, writing firmware for STM32 and ESP32, and measuring what every milliamp costs in a duty-cycled sensor node.",
-    "about.p2": "Competitions and research have taken me further than the classroom: my thesis compares buck and LDO regulators on a real workload, my IoT greenhouse placed Top 12 at Sang Tao Xanh 2025, and my smart helmet reached Top 20 at BK Innovation. I'm open to internships and junior roles in embedded systems — feel free to reach out.",
+    "about.p1": "Final-year IT student at HUFLIT, majoring in Microelectronics Engineering. I like the layer where hardware meets software — PCBs in KiCad, firmware for STM32 and ESP32, and low-power measurement. Open to internships and junior roles in embedded systems.",
     "projects.title": "Projects",
     "projects.p1.title": "Buck vs LDO Energy Comparison",
     "projects.p1.tag": "Undergraduate thesis project",
     "projects.p1.b1": "Compared a TPS62840 buck vs STLQ020 LDO powering the same workload: an STM32L432 + BME280 node on a 5 s duty cycle (race-to-sleep).",
-    "projects.p1.b2": "Designed the 4-layer PCB in KiCad; measured input-side energy with an INA228 across supply voltages from 3.3 V to 4.2 V.",
-    "projects.p1.b3": "286 verified measurement runs on the real workload.",
+    "projects.p1.b2": "Designed the 4-layer PCB in KiCad; measured input-side energy with an INA228 across supply voltages from 3.3 V to 4.2 V, 286 verified runs.",
     "projects.p2.title": "GreenEco — Smart Greenhouse",
     "projects.p2.award": "Top 12 — Green Innovation Contest (Sang Tao Xanh), HUST 2025",
     "projects.p2.b1": "IoT greenhouse on Raspberry Pi: AI plant-disease detection (teammates) and remote control of lights, pump and fans via an app.",
@@ -25,36 +19,33 @@ const I18N = {
     "projects.p3.award": "Top 20 — BK Innovation, HCMUT",
     "projects.p3.b1": "ESP32-S3 with RTOS firmware: MPU6050 fall detection with automatic SMS alerts, plus a HUD for directions.",
     "projects.p3.b2": "I built the sensor and firmware parts; the AI drowsiness feature belonged to teammates.",
-    "skills.title": "Skills",
-    "skills.embedded": "Embedded",
-    "skills.pcb": "PCB & Hardware",
-    "skills.tools": "Software & Tools",
-    "edu.title": "Education & Awards",
+    "awards.title": "Awards",
+    "edu.title": "Education",
     "edu.school.name": "HUFLIT — B.Sc. in IT, Microelectronics Engineering",
     "edu.school.year": "Final year",
     "edu.award1.title": "Top 12 — Green Innovation Contest (Sang Tao Xanh), HUST",
     "edu.award1.place": "GreenEco project",
     "edu.award2.title": "Top 20 — BK Innovation, HCMUT",
     "edu.award2.place": "Smart Helmet project",
+    "skills.title": "Skills",
+    "skills.embedded": "Embedded",
+    "skills.pcb": "PCB & Hardware",
+    "skills.tools": "Software & Tools",
+    "lang.title": "Languages",
+    "lang.list": "Vietnamese (native) · English",
   },
   vi: {
     "title": "Nguyen Thach Thanh — Hệ thống nhúng & IoT",
-    "nav.about": "Giới thiệu",
-    "nav.skills": "Kỹ năng",
-    "nav.projects": "Dự án",
-    "nav.education": "Học vấn",
     "hero.role": "Hệ thống nhúng & IoT",
     "hero.location": "Thành phố Hồ Chí Minh, Việt Nam",
     "hero.cv": "Tải CV — sắp có",
     "about.title": "Giới thiệu",
-    "about.p1": "Tôi là sinh viên năm cuối ngành CNTT tại HUFLIT, chuyên ngành Kỹ thuật vi mạch. Tôi thích lớp nơi phần cứng gặp phần mềm: thiết kế PCB bằng KiCad, viết firmware cho STM32 và ESP32, và đo xem từng milliamp tốn bao nhiêu năng lượng trên node cảm biến chạy duty-cycle.",
-    "about.p2": "Các cuộc thi và nghiên cứu đưa mình đi xa hơn lớp học: khoa luận so sánh buck và LDO trên workload thực tế, nhà kính IoT đạt Top 12 Sáng Tạo Xanh 2025, và mũ bảo hiểm thông minh đạt Top 20 BK Innovation. Hiện mình sẵn sàng cho các cơ hội thực tập và vị trí fresher về hệ thống nhúng — cứ nhắn cho mình nhé.",
+    "about.p1": "Sinh viên năm cuối ngành CNTT tại HUFLIT, chuyên ngành Kỹ thuật vi mạch. Thích lớp nơi phần cứng gặp phần mềm — PCB bằng KiCad, firmware STM32/ESP32, đo lường tiết kiệm năng lượng. Sẵn sàng cho cơ hội thực tập và vị trí fresher về hệ thống nhúng.",
     "projects.title": "Dự án",
     "projects.p1.title": "So sánh năng lượng Buck vs LDO",
     "projects.p1.tag": "Đề tài khoa luận tốt nghiệp",
     "projects.p1.b1": "So sánh buck TPS62840 với LDO STLQ020 trên cùng một workload: node STM32L432 + BME280 chạy duty-cycle 5 giây (race-to-sleep).",
-    "projects.p1.b2": "Tự thiết kế PCB 4 lớp bằng KiCad; đo năng lượng phía đầu vào bằng INA228 ở các mức nguồn 3,3 V – 4,2 V.",
-    "projects.p1.b3": "286 lần đo đã verify trên workload thực tế.",
+    "projects.p1.b2": "Tự thiết kế PCB 4 lớp bằng KiCad; đo năng lượng đầu vào bằng INA228 ở các mức nguồn 3,3 V – 4,2 V, 286 lần đo đã verify.",
     "projects.p2.title": "GreenEco — Nhà kính thông minh",
     "projects.p2.award": "Top 12 — Cuộc thi Sáng Tạo Xanh, Bách Khoa Hà Nội 2025",
     "projects.p2.b1": "Nhà kính IoT trên Raspberry Pi: AI nhận diện cây bệnh/sâu (của team) và điều khiển đèn, bơm, quạt từ xa qua app.",
@@ -63,24 +54,25 @@ const I18N = {
     "projects.p3.award": "Top 20 — BK Innovation, Bách Khoa TP.HCM",
     "projects.p3.b1": "ESP32-S3 chạy firmware RTOS: MPU6050 nhận biết té ngã, tự gửi SMS báo động, kèm HUD chỉ đường.",
     "projects.p3.b2": "Mình làm phần cảm biến và firmware; phần AI nhận biết ngủ gục do team phụ trách.",
-    "skills.title": "Kỹ năng",
-    "skills.embedded": "Hệ thống nhúng",
-    "skills.pcb": "PCB & Phần cứng",
-    "skills.tools": "Phần mềm & Công cụ",
-    "edu.title": "Học vấn & Giải thưởng",
+    "awards.title": "Giải thưởng",
+    "edu.title": "Học vấn",
     "edu.school.name": "HUFLIT — Cử nhân CNTT, chuyên ngành Kỹ thuật vi mạch",
     "edu.school.year": "Sinh viên năm cuối",
     "edu.award1.title": "Top 12 — Cuộc thi Sáng Tạo Xanh, Bách Khoa Hà Nội",
     "edu.award1.place": "Dự án GreenEco",
     "edu.award2.title": "Top 20 — BK Innovation, Bách Khoa TP.HCM",
     "edu.award2.place": "Dự án Mũ bảo hiểm thông minh",
+    "skills.title": "Kỹ năng",
+    "skills.embedded": "Hệ thống nhúng",
+    "skills.pcb": "PCB & Phần cứng",
+    "skills.tools": "Phần mềm & Công cụ",
+    "lang.title": "Ngôn ngữ",
+    "lang.list": "Tiếng Việt (bản ngữ) · Tiếng Anh",
   },
 };
 
 const langBtn = document.getElementById("lang-btn");
 const themeBtn = document.getElementById("theme-btn");
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
 
 function applyLang(lang) {
   document.documentElement.lang = lang;
@@ -106,6 +98,3 @@ themeBtn.addEventListener("click", () => {
   document.documentElement.dataset.theme = next;
   localStorage.setItem("theme", next);
 });
-
-menuBtn.addEventListener("click", () => navLinks.classList.toggle("open"));
-navLinks.addEventListener("click", () => navLinks.classList.remove("open"));
