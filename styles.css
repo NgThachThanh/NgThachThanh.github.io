@@ -127,6 +127,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
   max-width: 52rem;
   margin: 0 auto;
   padding: 4rem clamp(1.25rem, 5vw, 2rem);
+  scroll-margin-top: 4.5rem;
 }
 
 .section-title { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 1.5rem; }
@@ -166,6 +167,15 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .card h3 { margin-bottom: 0.5rem; }
 
 .card p { margin-bottom: 1rem; color: var(--text-soft); font-size: 0.95rem; }
+
+.card-award {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.btn.small { padding: 0.4rem 1rem; font-size: 0.85rem; }
 
 /* Experience */
 .timeline { display: grid; gap: 2rem; border-left: 2px solid var(--border); padding-left: 1.5rem; }

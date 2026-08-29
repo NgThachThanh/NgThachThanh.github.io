@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thach Thanh — Developer</title>
-  <meta name="description" content="Portfolio of Thach Thanh, a software developer." />
+  <title>Nguyen Thach Thanh — Embedded Systems &amp; IoT</title>
+  <meta name="description" content="Portfolio of Nguyen Thach Thanh, final-year IT student majoring in Microelectronics Engineering (HUFLIT). Embedded firmware, PCB design and IoT projects." />
   <link rel="stylesheet" href="styles.css" />
   <script>
     document.documentElement.dataset.theme =
@@ -19,7 +19,7 @@
       <a href="#about" data-i18n="nav.about">About</a>
       <a href="#skills" data-i18n="nav.skills">Skills</a>
       <a href="#projects" data-i18n="nav.projects">Projects</a>
-      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#education" data-i18n="nav.education">Education</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="nav-actions">
@@ -37,9 +37,9 @@
   <main>
     <section id="hero" class="hero reveal">
       <p class="hero-greeting" data-i18n="hero.greeting">Hi, my name is</p>
-      <h1>Thach Thanh<span class="accent">.</span></h1>
-      <h2 class="hero-role" data-i18n="hero.role">I build things for the web.</h2>
-      <p class="hero-tagline" data-i18n="hero.tagline">Software developer focused on clean, practical solutions. Welcome to my corner of the internet.</p>
+      <h1>Nguyen Thach Thanh</h1>
+      <h2 class="hero-role" data-i18n="hero.role">I build embedded systems &amp; IoT devices.</h2>
+      <p class="hero-tagline" data-i18n="hero.tagline">Final-year IT student majoring in Microelectronics Engineering. I like working close to the hardware: sensors, PCBs and low-power firmware.</p>
       <div class="hero-cta">
         <a class="btn primary" href="#projects" data-i18n="hero.cta.projects">View my projects</a>
         <a class="btn" href="#contact" data-i18n="hero.cta.contact">Get in touch</a>
@@ -49,8 +49,8 @@
     <section id="about" class="section reveal">
       <h2 class="section-title"><span class="accent">01.</span> <span data-i18n="about.title">About Me</span></h2>
       <div class="about-body">
-        <p data-i18n="about.p1">Hello! I'm Thach, a developer who enjoys turning ideas into working software. I care about writing code that is simple, readable, and easy to maintain.</p>
-        <p data-i18n="about.p2">I'm currently open to new opportunities where I can grow as an engineer and contribute to meaningful products. Feel free to reach out!</p>
+        <p data-i18n="about.p1">I'm Nguyen Thach Thanh, a final-year student (2023–2027) at HUFLIT, majoring in Microelectronics Engineering. Most of my work sits between hardware and software: designing PCBs in KiCad, writing firmware for STM32 and ESP32, and measuring how much energy every milliamp really costs.</p>
+        <p data-i18n="about.p2">I haven't worked at a company yet — everything here is research and competition work. I'm currently looking for my first opportunity (internship or junior role) in embedded systems or hardware-related development.</p>
       </div>
     </section>
 
@@ -58,16 +58,20 @@
       <h2 class="section-title"><span class="accent">02.</span> <span data-i18n="skills.title">Skills</span></h2>
       <div class="skills-grid">
         <div class="skill-group">
-          <h3 data-i18n="skills.langs">Languages</h3>
-          <div class="pills"><span>JavaScript</span><span>Python</span><span>HTML &amp; CSS</span><span>SQL</span></div>
+          <h3 data-i18n="skills.embedded">Embedded</h3>
+          <div class="pills"><span>STM32 (bare-metal C)</span><span>ESP32-S3 + RTOS</span><span>I2C / UART</span><span>Low-power duty cycling</span></div>
         </div>
         <div class="skill-group">
-          <h3 data-i18n="skills.frameworks">Frameworks &amp; Libraries</h3>
-          <div class="pills"><span>React</span><span>Node.js</span><span>Git</span></div>
+          <h3 data-i18n="skills.pcb">PCB &amp; Hardware</h3>
+          <div class="pills"><span>KiCad (4-layer PCB)</span><span>BME280</span><span>MPU6050</span><span>INA228</span><span>Raspberry Pi</span></div>
         </div>
         <div class="skill-group">
-          <h3 data-i18n="skills.tools">Tools &amp; Platforms</h3>
-          <div class="pills"><span>Linux</span><span>GitHub</span><span>Docker</span></div>
+          <h3 data-i18n="skills.software">Software</h3>
+          <div class="pills"><span>C</span><span>Python</span><span>REST API</span></div>
+        </div>
+        <div class="skill-group">
+          <h3 data-i18n="skills.tools">Tools</h3>
+          <div class="pills"><span>Git</span><span>Linux (WSL)</span></div>
         </div>
       </div>
     </section>
@@ -76,49 +80,54 @@
       <h2 class="section-title"><span class="accent">03.</span> <span data-i18n="projects.title">Projects</span></h2>
       <div class="cards">
         <article class="card">
-          <h3 data-i18n="projects.p1.title">Project One</h3>
-          <p data-i18n="projects.p1.desc">A short description of the project: what it does, the problem it solves, and what makes it interesting.</p>
-          <div class="pills"><span>React</span><span>Node.js</span></div>
+          <h3 data-i18n="projects.p1.title">Buck vs LDO Energy Comparison</h3>
+          <p data-i18n="projects.p1.desc">Compared a buck converter and an LDO powering the same real workload: an STM32L432 + BME280 node on a 5 s duty cycle (race-to-sleep), measured across supply voltages from 3.3 V to 4.2 V. Designed the 4-layer PCB in KiCad and measured input-side energy with an INA228 over 286 runs.</p>
+          <p class="card-award" data-i18n="projects.p1.tag">Undergraduate thesis project</p>
+          <div class="pills"><span>KiCad</span><span>STM32</span><span>C</span><span>Python</span></div>
         </article>
         <article class="card">
-          <h3 data-i18n="projects.p2.title">Project Two</h3>
-          <p data-i18n="projects.p2.desc">Another project description. Replace these cards with your real projects, links, and screenshots.</p>
-          <div class="pills"><span>Python</span><span>SQL</span></div>
+          <h3 data-i18n="projects.p2.title">GreenEco — Smart Greenhouse</h3>
+          <p data-i18n="projects.p2.desc">IoT greenhouse on Raspberry Pi, with AI plant-disease detection (teammates) and remote control of lights, pump and fans through an app. My part was the hardware side: sensor wiring and reading, and sending signals to the server, plus the relay control API.</p>
+          <p class="card-award" data-i18n="projects.p2.award">Top 12 — Green Innovation Contest (Sang Tao Xanh), HUST 2025</p>
+          <div class="pills"><span>Raspberry Pi</span><span>Python</span><span>GPIO</span><span>UART / I2C</span></div>
+          <a class="btn small" href="https://github.com/NgThachThanh/greeneco" target="_blank" rel="noopener">GitHub</a>
         </article>
         <article class="card">
-          <h3 data-i18n="projects.p3.title">Project Three</h3>
-          <p data-i18n="projects.p3.desc">A third project description. Two to three solid projects with clear results beat a long list.</p>
-          <div class="pills"><span>JavaScript</span><span>Docker</span></div>
+          <h3 data-i18n="projects.p3.title">Smart Helmet</h3>
+          <p data-i18n="projects.p3.desc">ESP32-S3 helmet with RTOS firmware: MPU6050 fall detection, automatic SMS to a phone when a fall is detected, and a HUD showing directions. The AI drowsiness feature was handled by teammates — I built the sensor and firmware parts.</p>
+          <p class="card-award" data-i18n="projects.p3.award">Top 20 — BK Innovation, HCMUT</p>
+          <div class="pills"><span>ESP32-S3</span><span>RTOS</span><span>MPU6050</span><span>C/C++</span></div>
         </article>
       </div>
     </section>
 
-    <section id="experience" class="section reveal">
-      <h2 class="section-title"><span class="accent">04.</span> <span data-i18n="exp.title">Experience &amp; Education</span></h2>
+    <section id="education" class="section reveal">
+      <h2 class="section-title"><span class="accent">04.</span> <span data-i18n="edu.title">Education &amp; Awards</span></h2>
       <div class="timeline">
         <div class="timeline-item">
-          <span class="timeline-period" data-i18n="exp.e1.period">2024 — Present</span>
-          <h3 data-i18n="exp.e1.role">Your Role</h3>
-          <p class="timeline-place" data-i18n="exp.e1.company">Company / Organization</p>
-          <p data-i18n="exp.e1.desc">Describe what you did, technologies you used, and measurable results.</p>
+          <span class="timeline-period">2023 — 2027</span>
+          <h3 data-i18n="edu.school.name">HUFLIT — B.Sc. in IT, Microelectronics Engineering</h3>
+          <p class="timeline-place" data-i18n="edu.school.year">Final year</p>
+          <p data-i18n="edu.school.note">GPA 2.9/4.0 · TOEIC 540/990</p>
         </div>
         <div class="timeline-item">
-          <span class="timeline-period" data-i18n="exp.edu1.period">2020 — 2024</span>
-          <h3 data-i18n="exp.edu1.degree">B.Sc. in Computer Science</h3>
-          <p class="timeline-place" data-i18n="exp.edu1.school">Your University</p>
-          <p data-i18n="exp.edu1.desc">Relevant coursework, achievements, or activities.</p>
+          <span class="timeline-period">2025</span>
+          <h3 data-i18n="edu.award1.title">Top 12 — Green Innovation Contest (Sang Tao Xanh), HUST</h3>
+          <p class="timeline-place" data-i18n="edu.award1.place">GreenEco project</p>
+        </div>
+        <div class="timeline-item">
+          <h3 data-i18n="edu.award2.title">Top 20 — BK Innovation, HCMUT</h3>
+          <p class="timeline-place" data-i18n="edu.award2.place">Smart Helmet project</p>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section contact reveal">
       <h2 class="section-title"><span class="accent">05.</span> <span data-i18n="contact.title">Get In Touch</span></h2>
-      <p data-i18n="contact.subtitle">My inbox is always open — whether you have an opportunity or just want to say hi.</p>
+      <p data-i18n="contact.subtitle">My inbox is always open — whether you have an opportunity or just want to talk hardware.</p>
       <a class="btn primary" href="mailto:ngthachthanh@gmail.com">ngthachthanh@gmail.com</a>
       <div class="socials">
         <a href="https://github.com/NgThachThanh" target="_blank" rel="noopener">GitHub</a>
-        <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#" target="_blank" rel="noopener">CV</a>
       </div>
     </section>
   </main>
