@@ -34,7 +34,7 @@
       </div>
       <span class="cv-soon" data-i18n="hero.cv">Download CV — coming soon</span>
       <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span data-i18n="about.title">About</span></h2>
-      <p class="about-text" data-i18n="about.p1">Final-year IT student at HUFLIT, majoring in Microelectronics Engineering. I like the layer where hardware meets software — PCBs in KiCad, firmware for STM32 and ESP32, and low-power measurement. Open to internships and junior roles in embedded systems.</p>
+      <p class="about-text" data-i18n="about.p1">Final-year Microelectronics Engineering student at HUFLIT, working where hardware meets firmware: I designed a 4-layer low-power PCB, wrote bare-metal STM32 firmware, and measured input energy of a duty-cycled IoT node across 286 instrumented runs. Co-author of two international conference papers (Springer CCIS; CUTE 2026). Looking for an embedded systems internship.</p>
     </div>
 
     <div class="col-center">
@@ -47,8 +47,9 @@
               <span class="card-meta">01/2026 — 08/2026</span>
             </div>
             <ul class="card-points">
-              <li data-i18n="projects.p1.b1">Compared a TPS62840 buck vs STLQ020 LDO powering the same workload: an STM32L432 + BME280 node on a 5 s duty cycle (race-to-sleep).</li>
-              <li data-i18n="projects.p1.b2">Designed the 4-layer PCB in KiCad; measured input-side energy with an INA228 across supply voltages from 3.3 V to 4.2 V, 286 verified runs.</li>
+              <li data-i18n="projects.p1.b1">Designed and brought up a 4-layer KiCad PCB with jumper-selectable TPS62840 buck / STLQ020 LDO branches powering an STM32L432 + BME280 node, and wrote the bare-metal firmware for the 5 s BME280–Stop2 duty cycle (race-to-sleep).</li>
+              <li data-i18n="projects.p1.b2">Built an INA228 input-side energy rig (~10k samples/s) and ran 286 verified experiments across 3.30–4.20 V — each run as a statistical unit, with confidence intervals plus ABBA and marker verification campaigns.</li>
+              <li data-i18n="projects.p1.b3">Showed the buck-vs-LDO trade-off is voltage-region-dependent: buck draws less at 4.2 V (7–9% lower) but more in the 3.35–3.60 V region.</li>
             </ul>
           </article>
           <article class="card">
@@ -57,8 +58,8 @@
               <span class="card-meta">2025</span>
             </div>
             <ul class="card-points">
-              <li data-i18n="projects.p2.b1">IoT greenhouse on Raspberry Pi: AI plant-disease detection (teammates) and remote control of lights, pump and fans via an app.</li>
-              <li data-i18n="projects.p2.b2">My part: sensor wiring and reading, sending signals to the server, and the relay control API.</li>
+              <li data-i18n="projects.p2.b1">Raspberry Pi greenhouse system: a REST API driving 4 active-low relay channels (pump, two fans, grow light), with sensor data streaming to the team's server and control app.</li>
+              <li data-i18n="projects.p2.b2">Brought up the hardware and sensor layer on two buses — RS485/Modbus RTU (ES-Soil7 soil, DFRobot environmental sensor) and UART (SEN0220 CO₂, SEN0501) — plus relay GPIO mapping, with Python unit tests covering the GPIO, UART/Modbus and API layers.</li>
             </ul>
             <a class="btn small" href="https://github.com/NgThachThanh/greeneco" target="_blank" rel="noopener">GitHub</a>
           </article>
@@ -68,8 +69,9 @@
               <span class="card-meta">2025</span>
             </div>
             <ul class="card-points">
-              <li data-i18n="projects.p3.b1">ESP32-S3 with RTOS firmware: MPU6050 fall detection with automatic SMS alerts, plus a HUD for directions.</li>
-              <li data-i18n="projects.p3.b2">I built the sensor and firmware parts; the AI drowsiness feature belonged to teammates.</li>
+              <li data-i18n="projects.p3.b1">ESP32-S3 dual-core FreeRTOS firmware: 100 Hz MPU6050 sensing task with a filtered, speed/road-adaptive threshold fall-detection state machine (3.5 g final threshold, staged alerts, physical cancel button).</li>
+              <li data-i18n="projects.p3.b2">Automatic SMS alert via GSM module (single send per crash, 10 s cancel window) and an OLED HUD fed by BLE navigation data from the phone.</li>
+              <li data-i18n="projects.p3.b3">I built the sensing and firmware parts; AI drowsiness detection belonged to teammates — the work was published as a co-authored paper at CUTE 2026 (see Publications).</li>
             </ul>
           </article>
         </div>
@@ -118,7 +120,7 @@
         <div class="skill-rows">
           <div class="skill-row">
             <h3 data-i18n="skills.embedded">Embedded</h3>
-            <p>STM32 bare-metal C · ESP32-S3 + RTOS · Low-power duty cycling · I2C/UART</p>
+            <p>STM32 bare-metal C · ESP32-S3 + RTOS · Low-power duty cycling · I2C/UART · Modbus RTU (RS485)</p>
           </div>
           <div class="skill-row">
             <h3 data-i18n="skills.pcb">PCB &amp; Hardware</h3>
