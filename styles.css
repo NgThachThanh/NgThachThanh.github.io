@@ -194,6 +194,8 @@ main section + section {
 
 .edu-school { font-size: 0.92rem; font-weight: 600; margin-top: 0.15rem; }
 
+.edu-degree { font-size: 0.9rem; font-weight: 500; margin-top: 0.15rem; }
+
 .timeline-place { color: var(--text-soft); font-size: 0.85rem; }
 
 .skill-rows { display: grid; gap: 0.55rem; }
