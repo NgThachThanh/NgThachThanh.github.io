@@ -36,7 +36,7 @@ const I18N = {
     "skills.protocols": "Protocols",
     "skills.tools": "Tools",
     "lang.title": "Languages",
-    "lang.list": "Vietnamese (native) · English",
+    "lang.list": "Vietnamese (native) · English (intermediate)",
   },
   vi: {
     "title": "Nguyen Thach Thanh — Hệ thống nhúng & IoT",
@@ -75,7 +75,7 @@ const I18N = {
     "skills.protocols": "Giao thức",
     "skills.tools": "Công cụ",
     "lang.title": "Ngôn ngữ",
-    "lang.list": "Tiếng Việt (bản ngữ) · Tiếng Anh",
+    "lang.list": "Tiếng Việt (bản ngữ) · Tiếng Anh (trung bình)",
   },
 };
 
