@@ -1,0 +1,7 @@
+# CodeGraph index (local)
+.codegraph/
+
+# CV: only ship the built PDFs
+CV/*
+!CV/cv_en.pdf
+!CV/cv_vi.pdf

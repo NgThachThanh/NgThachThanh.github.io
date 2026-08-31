@@ -3,14 +3,14 @@ const I18N = {
     "title": "Nguyen Thach Thanh — Embedded Systems & IoT",
     "hero.role": "Embedded Systems & IoT Engineering",
     "hero.location": "Ho Chi Minh City, Vietnam",
-    "hero.cv": "Download CV — coming soon",
+    "hero.cv": "Download CV",
     "about.title": "About",
     "about.p1": "Final-year Microelectronics Engineering student at HUFLIT, working where hardware meets firmware: I designed a 4-layer low-power PCB, wrote bare-metal STM32 firmware, and measured input energy of a duty-cycled IoT node across 286 instrumented runs. Co-author of two international conference papers (Springer CCIS; CUTE 2026). Looking for an embedded systems internship.",
     "projects.title": "Projects",
     "projects.p1.title": "Buck vs LDO Energy Comparison",
     "projects.p1.b1": "Designed and brought up a 4-layer KiCad PCB with jumper-selectable TPS62840 buck / STLQ020 LDO branches powering an STM32L432 + BME280 node, and wrote the bare-metal firmware for the 5 s BME280–Stop2 duty cycle (race-to-sleep).",
     "projects.p1.b2": "Built an INA228 input-side energy rig (~10k samples/s) and ran 286 verified experiments across 3.30–4.20 V — each run as a statistical unit, with confidence intervals plus ABBA and marker verification campaigns.",
-    "projects.p1.b3": "Showed the buck-vs-LDO trade-off is voltage-region-dependent: buck draws less at 4.2 V (7–9% lower) but more in the 3.35–3.60 V region.",
+    "projects.p1.b3": "Showed the buck-vs-LDO trade-off is voltage-region-dependent: buck draws 10–18% less across 3.80–4.20 V, but enters a high-input-energy state in the 3.35–3.60 V region (up to ~75× the LDO).",
     "projects.p2.title": "GreenEco — Smart Greenhouse",
     "projects.p2.b1": "Raspberry Pi greenhouse system: a REST API driving 4 active-low relay channels (pump, two fans, grow light), with sensor data streaming to the team's server and control app.",
     "projects.p2.b2": "Brought up the hardware and sensor layer on two buses — RS485/Modbus RTU (ES-Soil7 soil, DFRobot environmental sensor) and UART (SEN0220 CO₂, SEN0501) — plus relay GPIO mapping, with Python unit tests covering the GPIO, UART/Modbus and API layers.",
@@ -30,6 +30,8 @@ const I18N = {
     "edu.award1.place": "GreenEco project",
     "edu.award2.title": "Top 20 — BK Innovation, HCMUT",
     "edu.award2.place": "Smart Helmet project",
+    "edu.award3.title": "University-level research project",
+    "edu.award3.place": "Smart Helmet — HUFLIT",
     "skills.title": "Skills",
     "skills.programming": "Programming",
     "skills.mcu": "MCU",
@@ -42,14 +44,14 @@ const I18N = {
     "title": "Nguyen Thach Thanh — Hệ thống nhúng & IoT",
     "hero.role": "Hệ thống nhúng & IoT",
     "hero.location": "Thành phố Hồ Chí Minh, Việt Nam",
-    "hero.cv": "Tải CV — sắp có",
+    "hero.cv": "Tải CV",
     "about.title": "Giới thiệu",
     "about.p1": "Sinh viên năm cuối ngành Kỹ thuật vi mạch tại HUFLIT, làm việc ở lớp nơi phần cứng gặp firmware: tự thiết kế PCB 4 lớp tiết kiệm năng lượng, viết firmware bare-metal cho STM32, và đo năng lượng đầu vào của một node IoT chạy duty-cycle qua 286 lần đo có kiểm chứng. Đồng tác giả hai bài báo hội nghị quốc tế (Springer CCIS; CUTE 2026). Đang tìm cơ hội thực tập hệ thống nhúng.",
     "projects.title": "Dự án",
     "projects.p1.title": "So sánh năng lượng Buck vs LDO",
     "projects.p1.b1": "Tự thiết kế và đưa vào hoạt động PCB 4 lớp bằng KiCad với 2 nhánh nguồn buck TPS62840 / LDO STLQ020 chọn bằng jumper cấp nguồn cho node STM32L432 + BME280, đồng thời viết firmware bare-metal cho chu trình duty-cycle 5 giây BME280–Stop2 (race-to-sleep).",
     "projects.p1.b2": "Xây dựng hệ đo năng lượng đầu vào bằng INA228 (~10k mẫu/giây) và chạy 286 thí nghiệm đã kiểm chứng trên dải 3,30–4,20 V — mỗi lượt chạy là một đơn vị thống kê, có khoảng tin cậy cùng các đợt kiểm chứng ABBA và marker.",
-    "projects.p1.b3": "Chỉ ra đánh đổi buck–LDO phụ thuộc vùng điện áp: buck tiêu thụ ít hơn ở 4,2 V (thấp hơn 7–9%) nhưng cao hơn trong vùng 3,35–3,60 V.",
+    "projects.p1.b3": "Chỉ ra đánh đổi buck–LDO phụ thuộc vùng điện áp: buck tiêu thụ ít hơn 10–18% trên dải 3,80–4,20 V, nhưng rơi vào trạng thái tiêu thụ bất thường ở vùng 3,35–3,60 V (lên tới ~75 lần LDO).",
     "projects.p2.title": "GreenEco — Nhà kính thông minh",
     "projects.p2.b1": "Hệ thống nhà kính trên Raspberry Pi: API REST điều khiển 4 kênh relay active-low (máy bơm, hai quạt, đèn), dữ liệu cảm biến gửi lên server, app điều khiển do team phát triển.",
     "projects.p2.b2": "Khởi động tầng phần cứng và cảm biến trên 2 bus — RS485/Modbus RTU (cảm biến đất ES-Soil7, cảm biến môi trường DFRobot) và UART (SEN0220 CO₂, SEN0501) — cùng sơ đồ chân relay, kèm unit test Python cho các tầng GPIO, UART/Modbus và API.",
@@ -69,6 +71,8 @@ const I18N = {
     "edu.award1.place": "Dự án GreenEco",
     "edu.award2.title": "Top 20 — BK Innovation, Bách Khoa TP.HCM",
     "edu.award2.place": "Dự án Mũ bảo hiểm thông minh",
+    "edu.award3.title": "Đề tài nghiên cứu khoa học cấp trường",
+    "edu.award3.place": "Mũ bảo hiểm thông minh — HUFLIT",
     "skills.title": "Kỹ năng",
     "skills.programming": "Ngôn ngữ lập trình",
     "skills.mcu": "Vi điều khiển",
@@ -81,6 +85,7 @@ const I18N = {
 
 const langBtn = document.getElementById("lang-btn");
 const themeBtn = document.getElementById("theme-btn");
+const cvLink = document.getElementById("cv-link");
 
 function applyLang(lang) {
   document.documentElement.lang = lang;
@@ -89,6 +94,7 @@ function applyLang(lang) {
     const text = I18N[lang][el.dataset.i18n];
     if (text !== undefined) el.textContent = text;
   }
+  cvLink.href = lang === "en" ? "CV/cv_en.pdf" : "CV/cv_vi.pdf";
   langBtn.textContent = lang === "en" ? "VI" : "EN";
 }
 
