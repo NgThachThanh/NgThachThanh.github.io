@@ -3,5 +3,5 @@
 
 # CV: only ship the built PDFs
 CV/*
-!CV/cv_en.pdf
-!CV/cv_vi.pdf
+!CV/CV-NguyenThachThanh-EN.pdf
+!CV/CV-NguyenThachThanh-VI.pdf

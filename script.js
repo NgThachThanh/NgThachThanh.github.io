@@ -94,7 +94,7 @@ function applyLang(lang) {
     const text = I18N[lang][el.dataset.i18n];
     if (text !== undefined) el.textContent = text;
   }
-  cvLink.href = lang === "en" ? "CV/cv_en.pdf" : "CV/cv_vi.pdf";
+  cvLink.href = lang === "en" ? "CV/CV-NguyenThachThanh-EN.pdf" : "CV/CV-NguyenThachThanh-VI.pdf";
   langBtn.textContent = lang === "en" ? "VI" : "EN";
 }
 
