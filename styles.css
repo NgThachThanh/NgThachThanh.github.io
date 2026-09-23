@@ -134,6 +134,8 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 .about-text { color: var(--text-soft); font-size: 0.88rem; }
 
+.about-goal { margin-top: 0.5rem; color: var(--text); font-size: 0.86rem; }
+
 /* Center: achievements */
 .cards { display: grid; gap: 0.6rem; }
 
@@ -160,6 +162,68 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 /* Publications */
 #publications .card > .card-meta { display: block; margin-bottom: 0.15rem; }
+
+.pub-group-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  margin: 0.9rem 0 0.45rem;
+}
+
+.pub-group-title:first-of-type { margin-top: 0.2rem; }
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  color: var(--text);
+  background: color-mix(in srgb, var(--text) 6%, transparent);
+  margin-bottom: 0.4rem;
+}
+
+.pub-authors { color: var(--text-soft); font-size: 0.84rem; margin: 0.3rem 0; }
+
+.pub-authors strong { color: var(--text); font-weight: 600; }
+
+.empty-state {
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  border: 1px dashed var(--border);
+  border-radius: 0.375rem;
+  padding: 0.6rem 0.8rem;
+}
+
+/* Cards: subtle minimal polish */
+.card {
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.card:hover { border-color: var(--border); background: var(--bg-soft); }
+
+.card:focus-within { border-color: var(--text-soft); }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease; }
+
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  * { transition: none !important; }
+}
+
+:focus-visible { outline: 2px solid var(--text-soft); outline-offset: 2px; }
+
+::selection { background: color-mix(in srgb, var(--text) 15%, transparent); }
 
 .pub-title {
   font-size: 0.95rem;

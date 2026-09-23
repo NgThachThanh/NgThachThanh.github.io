@@ -5,7 +5,8 @@ const I18N = {
     "hero.location": "Ho Chi Minh City, Vietnam",
     "hero.cv": "Download CV",
     "about.title": "About",
-    "about.p1": "Final-year Microelectronics Engineering student at HUFLIT, working where hardware meets firmware: I designed a 4-layer low-power PCB, wrote bare-metal STM32 firmware, and measured input energy of a duty-cycled IoT node across 286 instrumented runs. Co-author of two international conference papers (Springer CCIS; CUTE 2026). Looking for an embedded systems internship.",
+    "about.p1": "Final-year Microelectronics Engineering student at HUFLIT focused on embedded systems and IoT — from bare-metal firmware to board bring-up and validation. Co-author of three international conference papers (two published, one accepted). Seeking an embedded systems internship where I can contribute to real hardware and grow toward a full-time embedded role.",
+    "about.p2": "Career goal: embedded firmware engineer for low-power IoT and edge-AI devices.",
     "projects.title": "Projects",
     "projects.p1.title": "Buck vs LDO Energy Comparison",
     "projects.p1.b1": "Designed and brought up a 4-layer KiCad PCB with jumper-selectable TPS62840 buck / STLQ020 LDO branches powering an STM32L432 + BME280 node, and wrote the bare-metal firmware for the 5 s BME280–Stop2 duty cycle (race-to-sleep).",
@@ -19,7 +20,15 @@ const I18N = {
     "projects.p3.b2": "Automatic SMS alert via GSM module (single send per crash, 10 s cancel window) and an OLED HUD fed by BLE navigation data from the phone.",
     "projects.p3.b3": "I built the sensing and firmware parts; AI drowsiness detection belonged to teammates — the work was published as a co-authored paper at CUTE 2026 (see Publications).",
     "pubs.title": "Publications",
+    "pubs.published": "Published",
+    "pubs.accepted": "Accepted",
+    "pubs.submitted": "Submitted",
+    "pubs.badge.accepted": "Accepted",
+    "pubs.toappear": "To appear in",
+    "pubs.submitted.empty": "No manuscripts under review.",
     "pubs.role": "Co-author",
+    "exp.title": "Experience",
+    "exp.empty": "No professional experience yet — open to an embedded systems internship.",
     "awards.title": "Awards",
     "edu.title": "Education",
     "edu.school.period": "2023 — Present",
@@ -46,7 +55,8 @@ const I18N = {
     "hero.location": "Thành phố Hồ Chí Minh, Việt Nam",
     "hero.cv": "Tải CV",
     "about.title": "Giới thiệu",
-    "about.p1": "Sinh viên năm cuối ngành Kỹ thuật vi mạch tại HUFLIT, làm việc ở lớp nơi phần cứng gặp firmware: tự thiết kế PCB 4 lớp tiết kiệm năng lượng, viết firmware bare-metal cho STM32, và đo năng lượng đầu vào của một node IoT chạy duty-cycle qua 286 lần đo có kiểm chứng. Đồng tác giả hai bài báo hội nghị quốc tế (Springer CCIS; CUTE 2026). Đang tìm cơ hội thực tập hệ thống nhúng.",
+    "about.p1": "Sinh viên năm cuối ngành Kỹ thuật vi mạch tại HUFLIT, tập trung vào hệ thống nhúng và IoT — từ firmware bare-metal tới bring-up bo mạch và kiểm chứng đo đạc. Đồng tác giả 3 bài báo hội nghị quốc tế (2 bài đã công bố, 1 bài được chấp nhận). Đang tìm vị trí thực tập hệ thống nhúng để đóng góp vào sản phẩm phần cứng thực tế và phát triển lên kỹ sư nhúng full-time.",
+    "about.p2": "Mục tiêu nghề nghiệp: kỹ sư firmware nhúng cho thiết bị IoT tiết kiệm năng lượng và edge-AI.",
     "projects.title": "Dự án",
     "projects.p1.title": "So sánh năng lượng Buck vs LDO",
     "projects.p1.b1": "Tự thiết kế và đưa vào hoạt động PCB 4 lớp bằng KiCad với 2 nhánh nguồn buck TPS62840 / LDO STLQ020 chọn bằng jumper cấp nguồn cho node STM32L432 + BME280, đồng thời viết firmware bare-metal cho chu trình duty-cycle 5 giây BME280–Stop2 (race-to-sleep).",
@@ -60,7 +70,15 @@ const I18N = {
     "projects.p3.b2": "Tự động gửi SMS cảnh báo qua module GSM (gửi một lần mỗi lần ngã, cửa sổ hủy 10 giây) và HUD OLED nhận dữ liệu chỉ đường qua BLE từ điện thoại.",
     "projects.p3.b3": "Mình làm phần cảm biến và firmware; phần AI phát hiện ngủ gục do team phụ trách — nghiên cứu đã công bố là bài báo đồng tác giả tại CUTE 2026 (xem Bài báo khoa học).",
     "pubs.title": "Bài báo khoa học",
+    "pubs.published": "Đã công bố",
+    "pubs.accepted": "Được chấp nhận",
+    "pubs.submitted": "Đã nộp",
+    "pubs.badge.accepted": "Được chấp nhận",
+    "pubs.toappear": "Sắp xuất hiện trong",
+    "pubs.submitted.empty": "Chưa có bản thảo đang xét duyệt.",
     "pubs.role": "Đồng tác giả",
+    "exp.title": "Kinh nghiệm",
+    "exp.empty": "Chưa có kinh nghiệm làm việc chính thức — đang tìm cơ hội thực tập hệ thống nhúng.",
     "awards.title": "Giải thưởng",
     "edu.title": "Học vấn",
     "edu.school.period": "2023 — nay",
@@ -112,3 +130,22 @@ themeBtn.addEventListener("click", () => {
   document.documentElement.dataset.theme = next;
   localStorage.setItem("theme", next);
 });
+
+// Reveal on scroll — minimal, respects reduced motion
+const revealEls = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+          io.unobserve(e.target);
+        }
+      }
+    },
+    { threshold: 0.08 }
+  );
+  for (const el of revealEls) io.observe(el);
+} else {
+  for (const el of revealEls) el.classList.add("visible");
+}

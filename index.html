@@ -34,11 +34,12 @@
       </div>
       <a class="cv-btn" id="cv-link" href="CV/CV-NguyenThachThanh-EN.pdf" download data-i18n="hero.cv">Download CV</a>
       <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span data-i18n="about.title">About</span></h2>
-      <p class="about-text" data-i18n="about.p1">Final-year Microelectronics Engineering student at HUFLIT, working where hardware meets firmware: I designed a 4-layer low-power PCB, wrote bare-metal STM32 firmware, and measured input energy of a duty-cycled IoT node across 286 instrumented runs. Co-author of two international conference papers (Springer CCIS; CUTE 2026). Looking for an embedded systems internship.</p>
+      <p class="about-text" data-i18n="about.p1">Final-year Microelectronics Engineering student at HUFLIT focused on embedded systems and IoT — from bare-metal firmware to board bring-up and validation. Co-author of three international conference papers (two published, one accepted). Seeking an embedded systems internship where I can contribute to real hardware and grow toward a full-time embedded role.</p>
+      <p class="about-text about-goal" data-i18n="about.p2">Career goal: embedded firmware engineer for low-power IoT and edge-AI devices.</p>
     </div>
 
     <div class="col-center">
-      <section id="projects">
+      <section id="projects" class="reveal">
         <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg><span data-i18n="projects.title">Projects</span></h2>
         <div class="cards">
           <article class="card">
@@ -78,8 +79,9 @@
           </article>
         </div>
       </section>
-      <section id="publications">
+      <section id="publications" class="reveal">
         <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><span data-i18n="pubs.title">Publications</span></h2>
+        <h3 class="pub-group-title" data-i18n="pubs.published">Published</h3>
         <div class="cards">
           <article class="card">
             <span class="card-meta" data-i18n="pubs.role">Co-author</span>
@@ -92,8 +94,19 @@
             <p class="card-meta">The 5th International Conference on Sustainable Development in Civil, Urban and Transportation Engineering (CUTE 2026)</p>
           </article>
         </div>
+        <h3 class="pub-group-title" data-i18n="pubs.accepted">Accepted</h3>
+        <div class="cards">
+          <article class="card" data-status="accepted">
+            <span class="status-badge" data-i18n="pubs.badge.accepted">Accepted</span>
+            <h3 class="pub-title">DG-GhostESP-96: dark-guided low-light image enhancement on STM32H750VBT6</h3>
+            <p class="pub-authors">Pham Cong Thien*, Tran Nam Truong, <strong>Nguyen Thach Thanh</strong>, Le Nhat Truong, Lam Yen Nha, Ha Thanh Sang</p>
+            <p class="card-meta"><span data-i18n="pubs.toappear">To appear in</span> The 7th International Conference on Engineering, Physics, MEMS-Biosensors and Applications (ICEBA 2026)</p>
+          </article>
+        </div>
+        <h3 class="pub-group-title" data-i18n="pubs.submitted">Submitted</h3>
+        <p class="empty-state" data-i18n="pubs.submitted.empty">No manuscripts under review.</p>
       </section>
-      <section id="awards">
+      <section id="awards" class="reveal">
         <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg><span data-i18n="awards.title">Awards</span></h2>
         <ul class="awards-list">
           <li>
@@ -116,14 +129,18 @@
     </div>
 
     <div class="col-right">
-      <section id="education">
+      <section id="education" class="reveal">
         <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span data-i18n="edu.title">Education</span></h2>
         <p class="edu-school" data-i18n="edu.school.name">Ho Chi Minh City University of Foreign Languages — Information Technology (HUFLIT)</p>
         <p class="edu-degree" data-i18n="edu.school.degree">B.Sc. Information Technology</p>
         <p class="timeline-place" data-i18n="edu.school.major">Major: Microelectronics Engineering</p>
         <span class="timeline-period" data-i18n="edu.school.period">2023 — Present</span>
       </section>
-      <section id="skills">
+      <section id="experience" class="reveal">
+        <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span data-i18n="exp.title">Experience</span></h2>
+        <p class="empty-state" data-i18n="exp.empty">No professional experience yet — open to an embedded systems internship.</p>
+      </section>
+      <section id="skills" class="reveal">
         <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span data-i18n="skills.title">Skills</span></h2>
         <div class="skill-rows">
           <div class="skill-row">
@@ -144,7 +161,7 @@
           </div>
         </div>
       </section>
-      <section id="languages">
+      <section id="languages" class="reveal">
         <h2 class="section-title"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span data-i18n="lang.title">Languages</span></h2>
         <p class="lang-list" data-i18n="lang.list">Vietnamese (native) · English (intermediate)</p>
       </section>
