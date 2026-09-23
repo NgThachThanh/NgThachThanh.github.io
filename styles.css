@@ -173,14 +173,6 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 .pub-group-title:first-of-type { margin-top: 0.2rem; }
 
-.empty-state {
-  color: var(--text-soft);
-  font-size: 0.86rem;
-  border: 1px dashed var(--border);
-  border-radius: 0.375rem;
-  padding: 0.6rem 0.8rem;
-}
-
 /* Cards: subtle minimal polish */
 .card {
   border: 1px solid transparent;
