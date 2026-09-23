@@ -135,7 +135,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .about-text { color: var(--text-soft); font-size: 0.88rem; }
 
 /* Center: achievements */
-.cards { display: grid; gap: 0.6rem; }
+.cards { display: grid; gap: 0.45rem; }
 
 .card-head {
   display: flex;
@@ -149,14 +149,14 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 .card-meta { color: var(--text-soft); font-size: 0.82rem; }
 
-.card-points { margin: 0.35rem 0 0.55rem; padding-left: 1.05rem; }
+.card-points { margin: 0.3rem 0 0.4rem; padding-left: 1.05rem; }
 
-.card-points li { color: var(--text-soft); font-size: 0.86rem; margin-bottom: 0.15rem; }
+.card-points li { color: var(--text-soft); font-size: 0.86rem; margin-bottom: 0.1rem; }
 
 .card-points li::marker { color: var(--border); }
 
 /* Awards */
-.awards-list { list-style: none; display: grid; gap: 0.5rem; }
+.awards-list { list-style: none; display: grid; gap: 0.35rem; }
 
 /* Publications */
 #publications .card > .card-meta { display: block; margin-bottom: 0.15rem; }
@@ -166,7 +166,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--text);
-  margin: 0.9rem 0 0.45rem;
+  margin: 0.65rem 0 0.35rem;
 }
 
 .pub-group-title:first-of-type { margin-top: 0.2rem; }
@@ -175,7 +175,7 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .card {
   border: 1px solid transparent;
   border-radius: 0.5rem;
-  padding: 0.75rem 0.85rem;
+  padding: 0.55rem 0.75rem;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
@@ -214,8 +214,8 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 /* Right: background */
 main section + section {
-  margin-top: 1.25rem;
-  padding-top: 1.25rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   border-top: 1px solid var(--border);
 }
 
