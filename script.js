@@ -1,6 +1,8 @@
 const I18N = {
   en: {
     "title": "Nguyen Thach Thanh — Embedded Systems & IoT",
+    "profile.name": "Nguyen Thach Thanh",
+    "footer.text": "© 2026 Nguyen Thach Thanh",
     "hero.role": "Embedded Systems & IoT Engineering",
     "hero.location": "Ho Chi Minh City, Vietnam",
     "hero.cv": "Download CV",
@@ -42,7 +44,9 @@ const I18N = {
     "lang.list": "Vietnamese · English (intermediate)",
   },
   vi: {
-    "title": "Nguyen Thach Thanh — Hệ thống nhúng & IoT",
+    "title": "Nguyễn Thạch Thành — Hệ thống nhúng & IoT",
+    "profile.name": "Nguyễn Thạch Thành",
+    "footer.text": "© 2026 Nguyễn Thạch Thành",
     "hero.role": "Hệ thống nhúng & IoT",
     "hero.location": "Thành phố Hồ Chí Minh, Việt Nam",
     "hero.cv": "Tải CV",
