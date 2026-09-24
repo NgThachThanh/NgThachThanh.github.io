@@ -6,9 +6,7 @@ const I18N = {
     "hero.location": "Ho Chi Minh City, Vietnam",
     "hero.cv": "Download CV",
     "about.title": "About",
-    "about.p1": "Final-year Microelectronics Engineering student at HUFLIT focused on embedded systems and PCB design — from schematic and board layout to bare-metal firmware, bring-up and validation.",
-    "objective.title": "Objective",
-    "objective.body": "Seeking an embedded systems internship where I can contribute to real hardware and grow toward a full-time embedded hardware engineer specializing in PCB design for low-power and edge-AI devices.",
+    "about.p1": "Final-year student at HUFLIT, passionate about designing PCBs and working directly with circuit boards — from schematic and layout/routing through bring-up, debugging, and testing to confirm that the board operates reliably.",
     "projects.title": "Projects",
     "projects.p1.title": "Buck vs LDO Energy Comparison",
     "projects.p1.b1": "Designed and brought up a 4-layer KiCad PCB with jumper-selectable TPS62840 buck / STLQ020 LDO branches powering an STM32L432 + BME280 node, and wrote the bare-metal firmware for the 5 s BME280–Stop2 duty cycle (race-to-sleep).",
@@ -39,6 +37,7 @@ const I18N = {
     "skills.tools": "Tools",
     "lang.title": "Languages",
     "lang.list": "Vietnamese · English (intermediate)",
+    "lang.switch": "Switch to Vietnamese",
   },
   vi: {
     "title": "Nguyễn Thạch Thành — Hệ thống nhúng & Thiết kế PCB",
@@ -47,9 +46,7 @@ const I18N = {
     "hero.location": "Thành phố Hồ Chí Minh, Việt Nam",
     "hero.cv": "Tải CV",
     "about.title": "Giới thiệu",
-    "about.p1": "Sinh viên năm cuối ngành Kỹ thuật vi mạch tại HUFLIT, tập trung vào hệ thống nhúng và thiết kế PCB — từ schematic, layout bo mạch tới firmware bare-metal, bring-up và kiểm chứng đo đạc.",
-    "objective.title": "Mục tiêu",
-    "objective.body": "Tìm vị trí thực tập hệ thống nhúng để đóng góp vào sản phẩm phần cứng thực tế và phát triển lên kỹ sư phần cứng nhúng full-time chuyên về thiết kế PCB cho thiết bị tiết kiệm năng lượng và edge-AI.",
+    "about.p1": "Tôi là sinh viên năm cuối tại HUFLIT, có niềm yêu thích với việc thiết kế PCB và làm việc trực tiếp với board mạch — từ schematic, layout/routing đến bring-up, debugging và kiểm thử để xác nhận board hoạt động ổn định.",
     "projects.title": "Dự án",
     "projects.p1.title": "So sánh năng lượng Buck vs LDO",
     "projects.p1.b1": "Tự thiết kế và đưa vào hoạt động PCB 4 lớp bằng KiCad với 2 nhánh nguồn buck TPS62840 / LDO STLQ020 chọn bằng jumper cấp nguồn cho node STM32L432 + BME280, đồng thời viết firmware bare-metal cho chu trình duty-cycle 5 giây BME280–Stop2 (race-to-sleep).",
@@ -80,6 +77,7 @@ const I18N = {
     "skills.tools": "Công cụ",
     "lang.title": "Ngôn ngữ",
     "lang.list": "Tiếng Việt · Tiếng Anh (trung bình)",
+    "lang.switch": "Chuyển sang tiếng Anh",
   },
 };
 
@@ -87,30 +85,51 @@ const langBtn = document.getElementById("lang-btn");
 const themeBtn = document.getElementById("theme-btn");
 const cvLink = document.getElementById("cv-link");
 
-function applyLang(lang) {
-  document.documentElement.lang = lang;
-  document.title = I18N[lang]["title"];
-  for (const el of document.querySelectorAll("[data-i18n]")) {
-    const text = I18N[lang][el.dataset.i18n];
-    if (text !== undefined) el.textContent = text;
+function getStored(key, fallback) {
+  try {
+    return localStorage.getItem(key) || fallback;
+  } catch {
+    return fallback;
   }
-  cvLink.href = lang === "en" ? "CV/CV-NguyenThachThanh-EN.pdf" : "CV/CV-NguyenThachThanh-VI.pdf";
-  langBtn.textContent = lang === "en" ? "VI" : "EN";
 }
 
-const savedLang = localStorage.getItem("lang") || "en";
+function setStored(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch {}
+}
+
+function applyLang(lang) {
+  const locale = Object.hasOwn(I18N, lang) ? lang : "en";
+  document.documentElement.lang = locale;
+  document.title = I18N[locale]["title"];
+  for (const el of document.querySelectorAll("[data-i18n]")) {
+    const text = I18N[locale][el.dataset.i18n];
+    if (text !== undefined) el.textContent = text;
+  }
+  cvLink.href = locale === "en" ? "CV/CV-NguyenThachThanh-EN.pdf" : "CV/CV-NguyenThachThanh-VI.pdf";
+  langBtn.textContent = locale === "en" ? "VI" : "EN";
+  langBtn.setAttribute("aria-label", I18N[locale]["lang.switch"]);
+}
+
+const savedLang = getStored("lang", "en");
 applyLang(savedLang);
 
 langBtn.addEventListener("click", () => {
   const next = document.documentElement.lang === "en" ? "vi" : "en";
-  localStorage.setItem("lang", next);
+  setStored("lang", next);
   applyLang(next);
 });
+
+const theme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+document.documentElement.dataset.theme = theme;
+themeBtn.setAttribute("aria-pressed", String(theme === "dark"));
 
 themeBtn.addEventListener("click", () => {
   const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
   document.documentElement.dataset.theme = next;
-  localStorage.setItem("theme", next);
+  setStored("theme", next);
+  themeBtn.setAttribute("aria-pressed", String(next === "dark"));
 });
 
 // Reveal on scroll — minimal, respects reduced motion
@@ -131,3 +150,5 @@ if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: re
 } else {
   for (const el of revealEls) el.classList.add("visible");
 }
+
+document.documentElement.classList.add("js");

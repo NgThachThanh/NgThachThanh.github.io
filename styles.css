@@ -112,7 +112,12 @@ html[data-theme="dark"] .icon-moon { display: block; }
 
 .cv-contact svg { width: 15px; height: 15px; flex-shrink: 0; }
 
-.cv-contact a { color: var(--text-soft); text-decoration: none; overflow-wrap: anywhere; }
+.cv-contact a {
+  color: var(--text-soft);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  overflow-wrap: anywhere;
+}
 .cv-contact a:hover { color: var(--text); }
 
 .cv-btn {
@@ -184,13 +189,18 @@ html[data-theme="dark"] .icon-moon { display: block; }
 .card:focus-within { border-color: var(--text-soft); }
 
 /* Reveal on scroll */
-.reveal { opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease; }
+html.js .reveal { opacity: 0; transform: translateY(10px); transition: opacity 0.5s ease, transform 0.5s ease; }
 
-.reveal.visible { opacity: 1; transform: none; }
+html.js .reveal.visible { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  html.js .reveal { opacity: 1; transform: none; transition: none; }
   * { transition: none !important; }
+}
+
+@media print {
+  html.js .reveal { opacity: 1; transform: none; }
+  .float-actions { display: none; }
 }
 
 :focus-visible { outline: 2px solid var(--text-soft); outline-offset: 2px; }
@@ -204,7 +214,11 @@ html[data-theme="dark"] .icon-moon { display: block; }
   margin-bottom: 0.25rem;
 }
 
-.pub-title a { color: inherit; text-decoration: none; }
+.pub-title a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 .pub-title a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
